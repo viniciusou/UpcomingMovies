@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UpcomingMovies.Views.MovieView"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout x:Name="sltMovie" Padding="10" Spacing="10">
+            <Image Source="{Binding Movie.PosterPath}" HeightRequest="200" />
+            <StackLayout Orientation="Vertical" Padding="10, 30, 10, 10" Spacing="10">
+                <Label Text="{Binding Movie.Title}" HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="{Binding Movie.ReleaseDate, StringFormat='{0:d}'}" HorizontalTextAlignment="Center" />
+                <Label Text="{Binding Movie.Genre}"  HorizontalTextAlignment="Center"/>
+                <ScrollView BackgroundColor="LightGray">
+                    <Label Text="{Binding Movie.Overview}" HorizontalTextAlignment="Center" />
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
