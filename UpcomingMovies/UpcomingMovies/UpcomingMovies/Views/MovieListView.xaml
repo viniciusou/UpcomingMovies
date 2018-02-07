@@ -5,7 +5,8 @@
              Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar x:Name="sbrMovies" Placeholder="Search"></SearchBar>
+            <Entry Text="{Binding MovieNameEntry}" />
+            <SearchBar x:Name="sbrMovies" Placeholder="Search" Text="{Binding MovieNameSearchBar}"></SearchBar>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                 <BoxView HeightRequest="0.5" BackgroundColor="LightGray"/>
                 <ListView x:Name="lvwMovies" 

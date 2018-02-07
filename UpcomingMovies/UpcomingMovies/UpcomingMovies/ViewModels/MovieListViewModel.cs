@@ -18,6 +18,10 @@ namespace UpcomingMovies.ViewModels
 
         public ObservableRangeCollection<Movie> Movies { get; private set; }
 
+        public string MovieNameEntry { get; set; }
+
+        public string MovieNameSearchBar { get; set; }
+
         public int TotalResults { get; private set; }
 
         Movie movie;
